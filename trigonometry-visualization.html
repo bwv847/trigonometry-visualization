@@ -106,6 +106,22 @@ function drawCoordinatePlaneAndCircle() {
   ctx.beginPath();
   ctx.arc(0, 0, radius, 0, 2 * Math.PI);
   ctx.stroke();
+
+  // y axis arrow
+  ctx.beginPath();
+  ctx.moveTo(-4, -180);
+  ctx.lineTo(4, -180);
+  ctx.lineTo(0, -200);
+  ctx.closePath();
+  ctx.fill();
+  
+  // x axis arrow
+  ctx.beginPath();
+  ctx.moveTo(180, -4);
+  ctx.lineTo(180, 4);
+  ctx.lineTo(200, 0);
+  ctx.closePath();
+  ctx.fill();
 }
 
 function drawTriangle(degree, radius) {
